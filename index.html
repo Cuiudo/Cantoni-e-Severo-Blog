@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A Importância da Preservação do Patrimônio Cultural Brasileiro</title>
+
+<!-- Importação das Fontes do Google -->
+<!-- Montserrat para títulos (sobriedade) e Lora para o corpo (toque literário) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+/* =========================================
+Variáveis de Cores (Paleta Cordel/Nordeste)
+========================================= /
+:root {
+--bg-color: #FDFBF7; / Amarelo Palha / Areia Clara /
+--primary-color: #1E3A8A; / Azul Colonial / Índigo /
+--text-color: #1F2937; / Cinza Escuro / Antracite /
+--card-bg: #FFFFFF; / Branco para cards */
+
+--font-title: 'Montserrat', sans-serif;
+--font-body: 'Lora', serif;
+}
+
+/* =========================================
+Reset e Configurações Globais
+========================================= */
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+body {
+background-color: var(--bg-color);
+color: var(--text-color);
+font-family: var(--font-body);
+line-height: 1.8;
+font-size: 18px;
+-webkit-font-smoothing: antialiased;
+}
+
+/* Container Principal */
+.container {
+max-width: 760px;
+margin: 0 auto;
+padding: 60px 20px;
+}
+
+/* =========================================
+Tipografia e Títulos
+========================================= */
+h1, h2, h3 {
+font-family: var(--font-title);
+color: var(--primary-color);
+}
+
+h1 {
+font-size: 2.5rem;
+font-weight: 800;
+line-height: 1.2;
+text-align: center;
+margin-bottom: 15px;
+letter-spacing: -0.5px;
+}
+
+h2 {
+font-size: 1.5rem;
+font-weight: 700;
+margin-top: 45px;
+margin-bottom: 20px;
+position: relative;
+padding-bottom: 10px;
+}
+
+h2::after {
+content: '';
+position: absolute;
+left: 0;
+bottom: 0;
+width: 50px;
+height: 3px;
+background-color: var(--primary-color);
+}
+
+p {
+margin-bottom: 24px;
+text-align: justify;
+}
+
+/* =========================================
+Cabeçalho (Header)
+========================================= */
+header {
+margin-bottom: 50px;
+text-align: center;
+}
+
+.header-subtitle {
+font-family: var(--font-title);
+font-size: 0.95rem;
+text-transform: uppercase;
+letter-spacing: 2px;
+color: #4b5563;
+font-weight: 600;
+margin-top: 15px;
+}
+
+/* =========================================
+Citação Centralizada (Blockquote)
+========================================= */
+.quote-box {
+background-color: var(--card-bg);
+border: 1px solid #E5E7EB;
+border-radius: 8px;
+padding: 40px 30px;
+margin: 40px 0;
+box-shadow: 0 10px 25px rgba(0, 0, 0, 0.03);
+text-align: center;
+}
+
+.quote-box blockquote {
+font-size: 1.35rem;
+font-style: italic;
+font-weight: 500;
+color: var(--primary-color);
+line-height: 1.6;
+}
+
+/* =========================================
+Box de Destaque / Callout (IPHAN)
+========================================= */
+.callout-box {
+background-color: var(--card-bg);
+border-left: 6px solid var(--primary-color);
+padding: 30px;
+margin: 40px 0;
+border-radius: 0 8px 8px 0;
+box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+}
+
+.callout-box p:last-child {
+margin-bottom: 0; /* Remove margem do último parágrafo dentro do box */
+}
+
+/* =========================================
+Chamada para Ação (CTA)
+========================================= */
+.cta-section {
+background-color: var(--primary-color);
+color: #ffffff;
+text-align: center;
+padding: 40px 20px;
+border-radius: 8px;
+margin: 50px 0;
+box-shadow: 0 8px 20px rgba(30, 58, 138, 0.15);
+}
+
+.cta-section h3 {
+color: #ffffff;
+font-size: 1.4rem;
+margin-bottom: 10px;
+}
+
+.cta-section p {
+text-align: center;
+margin-bottom: 0;
+font-size: 1.1rem;
+}
+
+/* =========================================
+Rodapé (Referências)
+========================================= */
+footer {
+margin-top: 60px;
+padding-top: 40px;
+border-top: 1px solid #d1d5db;
+}
+
+footer h3 {
+font-size: 1.1rem;
+margin-bottom: 20px;
+color: var(--text-color);
+}
+
+.references-list {
+list-style: none;
+}
+
+.references-list li {
+margin-bottom: 15px;
+font-size: 0.95rem;
+}
+
+.references-list a {
+color: var(--primary-color);
+text-decoration: none;
+font-weight: 600;
+word-break: break-all;
+transition: color 0.2s ease;
+}
+
+.references-list a:hover {
+color: #111827;
+text-decoration: underline;
+}
+
+/* =========================================
+Responsividade
+========================================= */
+@media (max-width: 600px) {
+h1 {
+font-size: 2rem;
+}
+h2 {
+font-size: 1.3rem;
+}
+.quote-box {
+padding: 30px 20px;
+}
+.quote-box blockquote {
+font-size: 1.15rem;
+}
+.callout-box {
+padding: 20px;
+}
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+
+<!-- Cabeçalho -->
+<header>
+<h1>A Importância da Preservação do Patrimônio Cultural Brasileiro</h1>
+<p class="header-subtitle">Uma reflexão a partir de "O Auto da Compadecida" e do legado de Ariano Suassuna</p>
+</header>
+
+<!-- Conteúdo Principal -->
+<article>
+
+<h2>O retrato autêntico do sertão na comédia</h2>
+<p>Quando se para para pensar na cultura brasileira, é impossível não olhar pros costumes e pra história do nosso povo. Um dos retratos mais marcantes dessa nossa identidade está na obra “O Auto da Compadecida”. Escrita por Ariano Suassuna ainda em 1955, a peça virou filme em 2000 nas mãos do diretor Guel Arraes e até hoje é um fenômeno. O enredo acompanha as enrascadas de João Grilo e Chicó tentando sobreviver no meio do sertão. Só que, por trás de toda essa comédia rasgada e das confusões da dupla, a obra cutuca feridas sociais bem reais. E é aí que ela mostra a vida no Nordeste sem maquiagem.</p>
+
+<p>O ponto forte do texto é como o Suassuna retrata a fé, o sotaque e o jeito de ser do nordestino. Tudo isso não está ali de enfeite, é o que dá vida pros personagens. Ele coloca no centro da história uma cultura que, muitas vezes, fica esquecida ou marginalizada pelo resto do país.</p>
+
+<!-- Citação em Bloco -->
+<div class="quote-box">
+<blockquote>
+"O humor entra como uma jogada inteligente. Ele deixa o filme leve e prende qualquer um na frente da tela, mas sem apagar a crítica dura que se encontra por trás de cada cena."
+</blockquote>
+</div>
+
+<h2>Heróis comuns: a força do improviso e da esperteza</h2>
+<p>Também vale destacar a escolha dos protagonistas. Em vez daqueles heróis perfeitos, a história coloca dois caras comuns na história. João Grilo e Chicó não têm dinheiro nem poder, então precisam se virar na esperteza e no improviso pra vencer a miséria e os abusos dos mais fortes. Com essa sacada simples, o autor valoriza a sabedoria do sertanejo e transforma o entretenimento numa reflexão direta sobre a realidade do Brasil.</p>
+
+<!-- Box de Destaque / Callout (IPHAN) -->
+<h2>O papel do IPHAN e a memória viva do Brasil</h2>
+<div class="callout-box">
+<p>Essa preocupação em preservar a cultura popular tem tudo a ver com o trabalho do IPHAN, o Instituto do Patrimônio Histórico e Artístico Nacional. Afinal, a identidade de um país não se resume a prédios antigos ou monumentos de pedra (isso é só uma parte). O patrimônio cultural de verdade é feito de saberes, celebrações e histórias passadas de geração em geração. É aí que produções como “O Auto da Compadecida” mostram seu valor, ajudando a espalhar e manter viva a memória de uma região.</p>
+</div>
+
+<h2>Mais do que rir: a cultura como identidade nacional</h2>
+<p>No fim das contas, a obra de Suassuna é muito mais do que uma comédia pra fazer rir. Ela consegue registrar a diversidade do Brasil com respeito e profundidade. Garantir que histórias como essa continuem sendo vistas e estudadas é fundamental pra que as próximas gerações conheçam e deem valor à nossa própria cultura.</p>
+
+<!-- Chamada para Ação (CTA) -->
+<section class="cta-section">
+<h3>E você?</h3>
+<p>Qual é a sua cena favorita de <strong>O Auto da Compadecida</strong>? Deixe sua opinião nos comentários abaixo e ajude a manter nossa cultura viva!</p>
+</section>
+
+</article>
+
+<!-- Referências Bibliográficas (Rodapé) -->
+<footer>
+<h3>Referências Bibliográficas</h3>
+<ul class="references-list">
+<li>
+<strong>Auto da Compadecida (Ariano Suassuna):</strong><br>
+<a href="https://padlet-uploads.storage.googleapis.com/587408263/7f788e331e704a665a58999546ad1bdd/Ariano_Suassuna___Auto_da_Compadecida.pdf" target="_blank" rel="noopener noreferrer">Leia o documento original (PDF)</a>
+</li>
+<li>
+<strong>IPHAN (Instituto do Patrimônio Histórico e Artístico Nacional):</strong><br>
+<a href="https://www.gov.br/pt-br/orgaos/instituto-do-patrimonio-historico-e-artistico-nacional" target="_blank" rel="noopener noreferrer">gov.br/pt-br/orgaos/instituto-do-patrimonio-historico-e-artistico-nacional</a>
+</li>
+</ul>
+</footer>
+
+</div>
+
+</body>
+</html>
