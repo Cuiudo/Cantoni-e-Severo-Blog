@@ -1,435 +1,355 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+<!DOCTYPE html>
+<html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>A Importância da Preservação do Patrimônio Cultural Brasileiro</title>
+<title>Preservação do Patrimônio Cultural Brasileiro: O Auto da Compadecida</title>
 
-<!-- Importação das Fontes do Google -->
+<!-- Google Fonts: Montserrat (Títulos) e Lora (Corpo) -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<!-- Montserrat para títulos, Lora para o corpo e Playfair para detalhes estilizados (aspas e capitular) -->
-<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Montserrat:wght@400;600;700;800;900&family=Playfair+Display:ital,wght@1,700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
 
 <style>
-/* =========================================
-Variáveis de Cores e Fontes
-========================================= /
+/* ==========================================================================
+1. VARIÁVEIS GLOBAIS E RESET (Paleta Cordel / Nordeste Moderno)
+========================================================================== /
 :root {
---bg-color: #FDFBF7; / Amarelo Palha / Areia Clara /
---primary-color: #1E3A8A; / Azul Colonial / Índigo /
---primary-light: #3B82F6; / Azul mais claro para gradientes /
---text-color: #1F2937; / Cinza Escuro / Antracite /
---card-bg: #FFFFFF; / Branco para cards /
---accent-color: #D97706; / Âmbar escuro para pequenos detalhes (opcional) */
-
---font-title: 'Montserrat', sans-serif;
+--bg-base: #FDFBF7; / Amarelo Palha / Areia Clara /
+--primary: #1E3A8A; / Azul Colonial / Índigo /
+--text-dark: #1F2937; / Cinza Escuro / Antracite /
+--card-bg: #FFFFFF; / Fundo Branco dos Cards /
+--border-color: #E5E7EB; / Bordas Sutis */
+--shadow-light: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+--shadow-medium: 0 10px 15px -3px rgba(0, 0, 0, 0.08);
+--font-heading: 'Montserrat', sans-serif;
 --font-body: 'Lora', serif;
---font-decor: 'Playfair Display', serif;
 }
 
-/* =========================================
-Reset e Textura de Fundo
-========================================= */
 * {
+box-sizing: border-box;
 margin: 0;
 padding: 0;
-box-sizing: border-box;
-}
-
-::selection {
-background-color: var(--primary-color);
-color: #ffffff;
 }
 
 body {
-/* Fundo palha com uma textura sutil de pontilhismo imitando papel */
-background-color: var(--bg-color);
-background-image: radial-gradient(rgba(30, 58, 138, 0.06) 1px, transparent 1px);
-background-size: 24px 24px;
-color: var(--text-color);
+background-color: var(--bg-base);
+color: var(--text-dark);
 font-family: var(--font-body);
-line-height: 1.85;
-font-size: 18px;
+font-size: 1.125rem; /* 18px */
+line-height: 1.8;
 -webkit-font-smoothing: antialiased;
 }
 
-/* Barra decorativa no topo da página */
-body::before {
-content: '';
-display: block;
-height: 6px;
-width: 100%;
-background: linear-gradient(90deg, var(--primary-color), var(--primary-light), var(--primary-color));
-position: fixed;
-top: 0;
-left: 0;
-z-index: 10;
-}
-
-/* Animação de Fade In suave para a página */
-@keyframes fadeIn {
-from { opacity: 0; transform: translateY(15px); }
-to { opacity: 1; transform: translateY(0); }
-}
-
-.container {
-max-width: 800px;
-margin: 0 auto;
-padding: 80px 20px 60px;
-animation: fadeIn 1s ease-out forwards;
-}
-
-/* =========================================
-Tipografia Literária
-========================================= */
-h1, h2, h3 {
-font-family: var(--font-title);
-color: var(--primary-color);
-}
-
+/* ==========================================================================
+2. CABEÇALHO E NAVEGAÇÃO
+========================================================================== */
 header {
+background-color: var(--card-bg);
+border-bottom: 4px solid var(--primary);
+box-shadow: var(--shadow-light);
+padding: 3rem 1.5rem 2.5rem;
 text-align: center;
-margin-bottom: 60px;
-position: relative;
 }
 
-h1 {
-font-size: 2.8rem;
-font-weight: 900;
-line-height: 1.15;
-letter-spacing: -1px;
-margin-bottom: 20px;
-text-shadow: 2px 2px 0px rgba(30, 58, 138, 0.05);
+.header-container {
+max-width: 900px;
+margin: 0 auto;
 }
 
-.header-subtitle {
-font-family: var(--font-title);
-font-size: 0.9rem;
-text-transform: uppercase;
-letter-spacing: 3px;
-color: #6B7280;
-font-weight: 700;
+.blog-badge {
 display: inline-block;
-border-top: 1px solid rgba(107, 114, 128, 0.3);
-border-bottom: 1px solid rgba(107, 114, 128, 0.3);
-padding: 8px 15px;
-margin-top: 10px;
+background-color: var(--primary);
+color: #FFFFFF;
+font-family: var(--font-heading);
+font-size: 0.85rem;
+font-weight: 700;
+text-transform: uppercase;
+letter-spacing: 1.5px;
+padding: 0.35rem 1rem;
+border-radius: 50px;
+margin-bottom: 1rem;
 }
 
-/* Estilização temática dos Subtítulos (Cordel Vibe) */
-h2 {
-font-size: 1.6rem;
+header h1 {
+font-family: var(--font-heading);
+color: var(--primary);
+font-size: 2.25rem;
 font-weight: 800;
-margin-top: 55px;
-margin-bottom: 25px;
-display: flex;
-align-items: center;
-gap: 15px;
+line-height: 1.25;
+margin-bottom: 0.75rem;
 }
 
-h2::before {
-content: '❖';
-color: var(--primary-color);
-font-size: 1.2rem;
-opacity: 0.8;
+header p.subtitle {
+font-size: 1.1rem;
+color: #4B5563;
+font-style: italic;
+}
+
+/* ==========================================================================
+3. LAYOUT PRINCIPAL E CONTEÚDO
+========================================================================== */
+main {
+max-width: 800px;
+margin: 2.5rem auto;
+padding: 0 1.5rem;
+}
+
+article {
+background-color: var(--card-bg);
+border: 1px solid var(--border-color);
+border-radius: 12px;
+box-shadow: var(--shadow-light);
+padding: 3rem 2.5rem;
 }
 
 p {
-margin-bottom: 26px;
+margin-bottom: 1.75rem;
 text-align: justify;
-color: #374151;
 }
 
-/* Letra Capitular (Drop Cap) para o primeiro parágrafo */
-p.intro::first-letter {
-font-family: var(--font-decor);
-font-size: 4.5rem;
-color: var(--primary-color);
-float: left;
-line-height: 0.8;
-padding-right: 12px;
-padding-top: 8px;
-font-style: italic;
-text-shadow: 2px 2px 0px rgba(30, 58, 138, 0.1);
+h2 {
+font-family: var(--font-heading);
+color: var(--primary);
+font-size: 1.5rem;
+font-weight: 700;
+margin: 2.5rem 0 1rem 0;
+padding-bottom: 0.5rem;
+border-bottom: 2px solid var(--bg-base);
+line-height: 1.3;
 }
 
-/* =========================================
-Citação em Bloco (Editorial)
-========================================= */
-.quote-box {
-background-color: var(--card-bg);
-border: 1px solid rgba(30, 58, 138, 0.1);
-border-radius: 12px;
-padding: 45px 40px;
-margin: 50px 0;
-box-shadow: 0 15px 35px rgba(0, 0, 0, 0.04);
+/* ==========================================================================
+4. ELEMENTOS VISUAIS ESPECÍFICOS (Blockquote, Callout, CTA)
+========================================================================== */
+
+/* Citação em Bloco (Blockquote) */
+blockquote {
+background-color: var(--bg-base);
+border-top: 3px solid var(--primary);
+border-bottom: 3px solid var(--primary);
+margin: 2.5rem 0;
+padding: 2rem;
 text-align: center;
-position: relative;
-overflow: hidden;
-transition: transform 0.3s ease, box-shadow 0.3s ease;
+border-radius: 4px;
 }
 
-.quote-box:hover {
-transform: translateY(-5px);
-box-shadow: 0 20px 45px rgba(30, 58, 138, 0.08);
-}
-
-/* Aspas Gigantes Decorativas no fundo */
-.quote-box::before {
-content: '“';
-font-family: var(--font-decor);
-font-size: 15rem;
-position: absolute;
-top: -60px;
-left: 20px;
-color: var(--primary-color);
-opacity: 0.05;
-line-height: 1;
-}
-
-.quote-box blockquote {
-position: relative;
-z-index: 2;
-font-size: 1.4rem;
+blockquote p {
+font-family: var(--font-body);
+font-size: 1.25rem;
 font-style: italic;
-font-weight: 500;
-color: var(--primary-color);
-line-height: 1.6;
-}
-
-/* =========================================
-Box de Destaque / Callout (IPHAN)
-========================================= */
-.callout-box {
-background-color: var(--card-bg);
-padding: 35px 30px 35px 40px;
-margin: 45px 0;
-border-radius: 0 12px 12px 0;
-box-shadow: 0 8px 25px rgba(0, 0, 0, 0.04);
-position: relative;
-}
-
-/* Borda lateral com gradiente */
-.callout-box::before {
-content: '';
-position: absolute;
-top: 0;
-left: 0;
-width: 8px;
-height: 100%;
-background: linear-gradient(180deg, var(--primary-color), var(--primary-light));
-border-radius: 4px 0 0 4px;
-}
-
-.callout-box p:last-child {
+color: var(--primary);
+font-weight: 600;
 margin-bottom: 0;
-}
-
-/* =========================================
-Chamada para Ação (CTA) - Vibrante
-========================================= */
-.cta-section {
-background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
-color: #ffffff;
 text-align: center;
-padding: 50px 30px;
-border-radius: 16px;
-margin: 60px 0;
-box-shadow: 0 12px 30px rgba(30, 58, 138, 0.25);
-position: relative;
-overflow: hidden;
 }
 
-/* Textura suave por cima do gradiente do CTA */
-.cta-section::after {
-content: '';
-position: absolute;
-top: 0;
-left: 0;
-width: 100%;
-height: 100%;
-background-image: radial-gradient(rgba(255, 255, 255, 0.2) 2px, transparent 2px);
-background-size: 30px 30px;
-opacity: 0.3;
-pointer-events: none;
+/* Box de Destaque / Callout (Patrimônio - IPHAN) */
+.callout-box {
+background-color: #F3F4F6;
+border-left: 6px solid var(--primary);
+padding: 1.75rem 1.5rem 0.25rem 1.75rem;
+margin: 2.5rem 0;
+border-radius: 0 8px 8px 0;
+box-shadow: var(--shadow-light);
+}
+
+.callout-box p {
+margin-bottom: 1.5rem;
+}
+
+/* Chamada para Ação (CTA Final) */
+.cta-section {
+background-color: var(--primary);
+color: #FFFFFF;
+padding: 2rem;
+border-radius: 8px;
+text-align: center;
+margin-top: 3rem;
+box-shadow: var(--shadow-medium);
 }
 
 .cta-section h3 {
-color: #ffffff;
-font-size: 1.6rem;
-margin-bottom: 15px;
-position: relative;
-z-index: 2;
+font-family: var(--font-heading);
+font-size: 1.3rem;
+margin-bottom: 0.5rem;
 }
 
 .cta-section p {
 text-align: center;
 margin-bottom: 0;
-font-size: 1.15rem;
-color: #f3f4f6;
-position: relative;
-z-index: 2;
+font-size: 1.05rem;
 }
 
-.cta-section strong {
-color: #FDFBF7;
-font-weight: 700;
-}
-
-/* Divisor Temático */
-.separator {
-text-align: center;
-margin: 50px 0;
-color: var(--primary-color);
-opacity: 0.3;
-font-size: 1.5rem;
-letter-spacing: 15px;
-}
-
-/* =========================================
-Rodapé (Referências)
-========================================= */
+/* ==========================================================================
+5. RODAPÉ E FONTES DE REFERÊNCIA
+========================================================================== */
 footer {
-margin-top: 60px;
-padding-top: 40px;
-border-top: 2px dashed rgba(30, 58, 138, 0.2);
+max-width: 800px;
+margin: 0 auto 3rem;
+padding: 0 1.5rem;
 }
 
-footer h3 {
-font-size: 1.2rem;
-margin-bottom: 25px;
-color: var(--primary-color);
-font-weight: 800;
-text-transform: uppercase;
-letter-spacing: 1px;
-}
-
-.references-list {
-list-style: none;
-display: flex;
-flex-direction: column;
-gap: 20px;
-}
-
-.references-list li {
-background-color: rgba(255, 255, 255, 0.6);
-padding: 20px;
-border-radius: 8px;
-border: 1px solid rgba(0,0,0,0.05);
-font-size: 0.95rem;
-transition: background-color 0.3s ease;
-}
-
-.references-list li:hover {
+.references-card {
 background-color: var(--card-bg);
-box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+border: 1px solid var(--border-color);
+border-radius: 8px;
+padding: 1.5rem 2rem;
+box-shadow: var(--shadow-light);
 }
 
-.references-list a {
-display: inline-block;
-margin-top: 8px;
-color: var(--primary-color);
+.references-card h4 {
+font-family: var(--font-heading);
+color: var(--primary);
+font-size: 1.1rem;
+margin-bottom: 1rem;
+text-transform: uppercase;
+letter-spacing: 0.5px;
+}
+
+.references-card ul {
+list-style-type: none;
+}
+
+.references-card li {
+margin-bottom: 0.5rem;
+font-size: 1rem;
+}
+
+.references-card li:last-child {
+margin-bottom: 0;
+}
+
+.references-card a {
+color: var(--primary);
+font-weight: 600;
 text-decoration: none;
-font-weight: 700;
-font-family: var(--font-title);
-word-break: break-all;
-transition: color 0.2s ease, padding-left 0.2s ease;
+transition: color 0.2s ease, text-decoration 0.2s ease;
 }
 
-.references-list a:hover {
-color: var(--primary-light);
-padding-left: 5px; /* Efeito interativo no link */
+.references-card a:hover {
+color: #111827;
+text-decoration: underline;
 }
 
-/* =========================================
-Responsividade
-========================================= */
-@media (max-width: 768px) {
-h1 {
-font-size: 2.2rem;
+.copyright {
+text-align: center;
+font-size: 0.9rem;
+color: #6B7280;
+margin-top: 2rem;
 }
-p.intro::first-letter {
-font-size: 3.8rem;
+
+/* ==========================================================================
+6. RESPONSIVIDADE (Celulares e Tablets)
+========================================================================== */
+@media (max-width: 640px) {
+header {
+padding: 2rem 1rem 1.5rem;
 }
-.quote-box {
-padding: 35px 25px;
+
+header h1 {
+font-size: 1.65rem;
 }
-.quote-box blockquote {
-font-size: 1.2rem;
+
+article {
+padding: 1.5rem 1.25rem;
 }
-.quote-box::before {
-font-size: 10rem;
-top: -30px;
+
+h2 {
+font-size: 1.25rem;
+}
+
+blockquote {
+padding: 1.25rem;
+}
+
+blockquote p {
+font-size: 1.1rem;
+}
+
+p {
+text-align: left; /* Melhora a leitura em telas pequenas evitando grandes espaçamentos */
 }
 }
 </style>
 </head>
 <body>
 
-<div class="container">
-
-<!-- Cabeçalho -->
+<!-- CABEÇALHO DO BLOG -->
 <header>
+<div class="header-container">
+<span class="blog-badge">Blog Escolar de Literatura & Cultura</span>
 <h1>A Importância da Preservação do Patrimônio Cultural Brasileiro</h1>
-<p class="header-subtitle">Uma reflexão a partir de "O Auto da Compadecida" e do legado de Ariano Suassuna</p>
+<p class="subtitle">Uma reflexão crítica a partir da obra "O Auto da Compadecida", de Ariano Suassuna</p>
+</div>
 </header>
 
-<!-- Conteúdo Principal -->
+<!-- CONTEÚDO PRINCIPAL DA RESENHA -->
+<main>
 <article>
+<!-- Introdução -->
+<p>
+Quando se para para pensar na cultura brasileira, é impossível não olhar pros costumes e pra história do nosso povo. Um dos retratos mais marcantes dessa nossa identidade está na obra “O Auto da Compadecida”. Escrita por Ariano Suassuna ainda em 1955, a peça virou filme em 2000 nas mãos do diretor Guel Arraes e até hoje é um fenômeno. O enredo acompanha as enrascadas de João Grilo e Chicó tentando sobreviver no meio do sertão. Só que, por trás de toda essa comédia rasgada e das confusões da dupla, a obra cutuca feridas sociais bem reais. E é aí que ela mostra a vida no Nordeste sem maquiagem.
+</p>
 
+<!-- Seção 1 -->
 <h2>O retrato autêntico do sertão na comédia</h2>
-<!-- Note a classe 'intro' para ativar a letra Capitular estilizada -->
-<p class="intro">Quando se para para pensar na cultura brasileira, é impossível não olhar pros costumes e pra história do nosso povo. Um dos retratos mais marcantes dessa nossa identidade está na obra “O Auto da Compadecida”. Escrita por Ariano Suassuna ainda em 1955, a peça virou filme em 2000 nas mãos do diretor Guel Arraes e até hoje é um fenômeno. O enredo acompanha as enrascadas de João Grilo e Chicó tentando sobreviver no meio do sertão. Só que, por trás de toda essa comédia rasgada e das confusões da dupla, a obra cutuca feridas sociais bem reais. E é aí que ela mostra a vida no Nordeste sem maquiagem.</p>
+<p>
+O ponto forte do texto é como o Suassuna retrata a fé, o sotaque e o jeito de ser do nordestino. Tudo isso não está ali de enfeite, é o que dá vida pros personagens. Ele coloca no centro da história uma cultura que, muitas vezes, fica esquecida ou marginalizada pelo resto do país. O humor entra como uma jogada inteligente. Ele deixa o filme leve e prende qualquer um na frente da tela, mas sem apagar a crítica dura que se encontra por trás de cada cena.
+</p>
 
-<p>O ponto forte do texto é como o Suassuna retrata a fé, o sotaque e o jeito de ser do nordestino. Tudo isso não está ali de enfeite, é o que dá vida pros personagens. Ele coloca no centro da história uma cultura que, muitas vezes, fica esquecida ou marginalizada pelo resto do país.</p>
-
-<!-- Citação em Bloco Estilizada com Aspas Gigantes no Fundo -->
-<div class="quote-box">
+<!-- Citação em Bloco -->
 <blockquote>
-O humor entra como uma jogada inteligente. Ele deixa o filme leve e prende qualquer um na frente da tela, mas sem apagar a crítica dura que se encontra por trás de cada cena.
+<p>"O humor entra como uma jogada inteligente. Ele deixa o filme leve e prende qualquer um na frente da tela, mas sem apagar a crítica dura que se encontra por trás de cada cena."</p>
 </blockquote>
-</div>
 
+<!-- Seção 2 -->
 <h2>Heróis comuns: a força do improviso e da esperteza</h2>
-<p>Também vale destacar a escolha dos protagonistas. Em vez daqueles heróis perfeitos, a história coloca dois caras comuns na história. João Grilo e Chicó não têm dinheiro nem poder, então precisam se virar na esperteza e no improviso pra vencer a miséria e os abusos dos mais fortes. Com essa sacada simples, o autor valoriza a sabedoria do sertanejo e transforma o entretenimento numa reflexão direta sobre a realidade do Brasil.</p>
+<p>
+Também vale destacar a escolha dos protagonistas. Em vez daqueles heróis perfeitos, a história coloca dois caras comuns na história. João Grilo e Chicó não têm dinheiro nem poder, então precisam se virar na esperteza e no improviso pra vencer a miséria e os abusos dos mais fortes. Com essa sacada simples, o autor valoriza a sabedoria do sertanejo e transforma o entretenimento numa reflexão direta sobre a realidade do Brasil.
+</p>
 
-<!-- Box de Destaque / Callout (IPHAN) com Borda Gradiente -->
+<!-- Seção 3 & Box de Destaque Callout -->
 <h2>O papel do IPHAN e a memória viva do Brasil</h2>
 <div class="callout-box">
-<p>Essa preocupação em preservar a cultura popular tem tudo a ver com o trabalho do IPHAN, o Instituto do Patrimônio Histórico e Artístico Nacional. Afinal, a identidade de um país não se resume a prédios antigos ou monumentos de pedra (isso é só uma parte). O patrimônio cultural de verdade é feito de saberes, celebrações e histórias passadas de geração em geração. É aí que produções como “O Auto da Compadecida” mostram seu valor, ajudando a espalhar e manter viva a memória de uma região.</p>
+<p>
+Essa preocupação em preservar a cultura popular tem tudo a ver com o trabalho do IPHAN, o Instituto do Patrimônio Histórico e Artístico Nacional. Afinal, a identidade de um país não se resume a prédios antigos ou monumentos de pedra (isso é só uma parte). O patrimônio cultural de verdade é feito de saberes, celebrações e histórias passadas de geração em geração. É aí que produções como “O Auto da Compadecida” mostram seu valor, ajudando a espalhar e manter viva a memória de uma região.
+</p>
 </div>
 
+<!-- Seção 4 -->
 <h2>Mais do que rir: a cultura como identidade nacional</h2>
-<p>No fim das contas, a obra de Suassuna é muito mais do que uma comédia pra fazer rir. Ela consegue registrar a diversidade do Brasil com respeito e profundidade. Garantir que histórias como essa continuem sendo vistas e estudadas é fundamental pra que as próximas gerações conheçam e deem valor à nossa própria cultura.</p>
+<p>
+No fim das contas, a obra de Suassuna é muito mais do que uma comédia pra fazer rir. Ela consegue registrar a diversidade do Brasil com respeito e profundidade. Garantir que histórias como essa continuem sendo vistas e estudadas é fundamental pra que as próximas gerações conheçam e deem valor à nossa própria cultura.
+</p>
 
-<!-- Divisor Literário -->
-<div class="separator">❖ ❖ ❖</div>
-
-<!-- Chamada para Ação (CTA) com fundo gradiente -->
-<section class="cta-section">
-<h3>E você?</h3>
-<p>Qual é a sua cena favorita de <strong>O Auto da Compadecida</strong>? Deixe sua opinião nos comentários abaixo e ajude a manter nossa cultura viva!</p>
-</section>
-
+<!-- Chamada para Ação (CTA) -->
+<div class="cta-section">
+<h3>E você, o que acha?</h3>
+<p>Participe do nosso blog escolar! Deixe nos comentários: qual é a sua cena favorita de <em>O Auto da Compadecida</em> e por quê?</p>
+</div>
 </article>
+</main>
 
-<!-- Referências Bibliográficas em Cards Modernos -->
+<!-- RODAPÉ E SEÇÃO DE FONTES/REFERÊNCIAS -->
 <footer>
-<h3>Referências Bibliográficas</h3>
-<ul class="references-list">
+<div class="references-card">
+<h4>Fontes e Referências de Pesquisa</h4>
+<ul>
 <li>
-<span><strong>Auto da Compadecida (Ariano Suassuna):</strong></span><br>
-<a href="https://padlet-uploads.storage.googleapis.com/587408263/7f788e331e704a665a58999546ad1bdd/Ariano_Suassuna___Auto_da_Compadecida.pdf" target="_blank" rel="noopener noreferrer">Ler o documento original (PDF) →</a>
+<strong>Obra de referência:</strong>
+<a href="https://www.cultura.ba.gov.br/arquivos/File/o_auto_da_compadecida.pdf" target="_blank" rel="noopener noreferrer">O Auto da Compadecida (PDF)</a>
 </li>
 <li>
-<span><strong>IPHAN (Instituto do Patrimônio Histórico e Artístico Nacional):</strong></span><br>
-<a href="https://www.gov.br/pt-br/orgaos/instituto-do-patrimonio-historico-e-artistico-nacional" target="_blank" rel="noopener noreferrer">Acessar o portal gov.br →</a>
+<strong>Órgão de preservação:</strong>
+<a href="http://portal.iphan.gov.br/" target="_blank" rel="noopener noreferrer">IPHAN (Instituto do Patrimônio Histórico e Artístico Nacional)</a>
 </li>
 </ul>
-</footer>
-
 </div>
+<p class="copyright">© Blog Escolar - Projeto de Literatura e Patrimônio Cultural Brasileiro.</p>
+</footer>
 
 </body>
 </html>
